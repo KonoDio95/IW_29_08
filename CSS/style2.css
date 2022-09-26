@@ -21,6 +21,7 @@ body {
     margin: 0 0 0 5%;
 }
 #header a {
+    margin-right: 10px;
     float: left;
     text-align: center;
     padding: 0.25em;
@@ -53,6 +54,7 @@ body {
     margin-top: auto;
 }
 #footer a {
+    margin: 0 10px 0 10px;
     float: left;
     text-align: center;
     padding: 0.25em;
@@ -90,11 +92,13 @@ body {
 
 /*Notícias*/
 .recent_news-1 {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 /*Cards de Notícias*/
 .news_card-1 {
+    margin: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,4 +161,9 @@ body {
 }
 .button-1:hover{
     background-color: rgb(0, 146, 224);
+}
+
+/*Text*/
+h3 {
+    margin: 10px;
 }
