@@ -177,3 +177,9 @@ body {
 h3 {
     margin: 10px;
 }
+
+/*images*/
+.news_card-1 img {
+    width: 296px;
+    height: 196px;
+}
