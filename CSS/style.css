@@ -89,12 +89,53 @@ body {
     border: 2px solid gray;
 }
 
-/*slides*/
+/*SlideShow*/
 #prin_news {
+    position: relative;
     height: 265px; 
     margin: 2px 2px 2px 2px; 
     background-color: black;
     width: 60%;
+}
+#prin_news, #prin_news > * {
+    border-radius: 10px;
+}
+.img_slide{
+    height: 100%;
+}
+.img_in_slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    color: white;
+}
+.img_in_slide img{
+    max-height: 100%;
+    max-width: 100%;
+
+}
+.img_in_slide_txt {
+    position: absolute;
+    bottom: 0.3rem;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.next {
+    margin-right: 0.5rem;
+    right: 0;
+}
+.ocult{
+    display: none;
 }
 
 /*Notícias*/
@@ -107,12 +148,12 @@ body {
 }
 /*Cards de Notícias*/
 .news_card-1 {
-    margin: 2px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 30%;
     flex-direction: column;
+    margin: 2px;
+    width: 30%;
     background-color: black;
     color: white;
     cursor: pointer;
@@ -126,6 +167,9 @@ body {
 .news_card-1 img{
     border-radius: 10px 10px 0 0;
     width: 100%;
+    height: 196px;
+    object-fit: cover;
+    object-position: top;
 }
 .news_card-1 a{
     color: white;
@@ -136,7 +180,7 @@ body {
 #form_contact-1 {
     border: 2px solid black;
     border-radius: 2%;
-    padding: 5px;
+    padding: 0.2em;
     width: 35%;
     max-height: 250px;
 }
@@ -178,8 +222,39 @@ h3 {
     margin: 10px;
 }
 
-/*images*/
-.news_card-1 img {
-    width: 296px;
-    height: 196px;
+
+
+
+
+@media only screen and (max-width:768px){
+    .content-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #prin_news {
+        margin: 2px 2px 10px 2px;
+        width: 100%;
+    }
+    .img_in_slide img{
+        border-radius: 10px;
+    }
+
+    #form_contact-1 {
+        width: 95%;
+    }
+
+    .recent_news-1 {
+        flex-direction: column;
+    }
+    .news_card-1 {
+        width: 100%;
+    }
+    .news_card-1 img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
 }
