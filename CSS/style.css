@@ -71,6 +71,11 @@ body {
 #footer ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    flex-direction: row;
+    align-items: center;
 }
 
 
@@ -124,10 +129,15 @@ body {
     bottom: 0.3rem;
 }
 .prev, .next {
+    display: flex;
+    align-items: center;
+    align-content: center;
     position: absolute;
-    top: 50%;
+    top: 0;
+    height: 100%;
     color: white;
     margin-left: 0.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 .next {
